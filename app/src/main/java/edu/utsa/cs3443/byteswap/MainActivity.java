@@ -1,5 +1,4 @@
 package edu.utsa.cs3443.byteswap;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private Button settingsButton;
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     private void setUpButtons(){
-        Button settingsButton = findViewById(R.id.settingsButton);
+        settingsButton = findViewById(R.id.settingsButton);
         settingsButton.setText("Settings");
         settingsButton.setOnClickListener(this);
 
