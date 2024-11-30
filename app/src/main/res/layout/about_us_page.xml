@@ -7,19 +7,13 @@
 
     <!-- Settings Title -->
     <TextView
-        android:id="@+id/settings_title"
+        android:id="@+id/aboutUsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
+        android:text="About The Team"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="20dp" />
-
-    <Button
-        android:id="@+id/about_Us"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="About The Team" />
 
     <Button
         android:id="@+id/back_button"

@@ -28,6 +28,9 @@
         <activity
             android:name=".Settings"
             android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
 
     </application>
 
