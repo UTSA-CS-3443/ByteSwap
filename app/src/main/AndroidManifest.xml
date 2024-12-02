@@ -31,6 +31,7 @@
         <activity
             android:name=".AboutUs"
             android:exported="false" />
+        <activity android:name=".debug_funny" android:exported="false"/>
 
     </application>
 
