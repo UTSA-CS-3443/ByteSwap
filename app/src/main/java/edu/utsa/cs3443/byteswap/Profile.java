@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ProfileActivity extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
 
     private EditText statusInput;
     private Button postButton;
@@ -29,13 +29,13 @@ public class ProfileActivity extends AppCompatActivity {
 
                 if (!statusText.isEmpty()) {
                     // Show a toast with the status message
-                    Toast.makeText(ProfileActivity.this, "Posted: " + statusText, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Profile.this, "Posted: " + statusText, Toast.LENGTH_SHORT).show();
 
                     // Clear the input field after posting
                     statusInput.setText("");
                 } else {
                     // Inform the user if the status is empty
-                    Toast.makeText(ProfileActivity.this, "Please enter a status!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Profile.this, "Please enter a status!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
