@@ -1,9 +1,9 @@
 package edu.utsa.cs3443.byteswap;
-import edu.utsa.cs3443.byteswap.R;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,10 +17,22 @@ public class MainActivity extends AppCompatActivity {
     public static String accountName = "ByteSwap";
     public static String password = "password";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Check if the user is logged in
+        SharedPreferences sharedPref = getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE);
+        boolean isLoggedIn = sharedPref.getBoolean("isLoggedIn", false);
+
+        if (!isLoggedIn) {
+            // Redirect to LoginActivity if not logged in
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish(); // Close MainActivity to prevent returning here without logging in
+            return;
+        }
+
         setContentView(R.layout.activity_main);
 
         // Set up BottomNavigationView
@@ -39,15 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 selectedFragment = new HomeFragment();
             } else if (item.getItemId() == R.id.nav_settings) {
                 selectedFragment = new Settings();
-
-            }else if (item.getItemId() == R.id.nav_account) {
+            } else if (item.getItemId() == R.id.nav_account) {
                 selectedFragment = new Account();
-            }else if (item.getItemId() == R.id.nav_directmessaging) {
+            } else if (item.getItemId() == R.id.nav_directmessaging) {
                 selectedFragment = new messaging_page();
-            } else {
-                selectedFragment = null;
             }
-
 
             if (selectedFragment != null) {
                 getSupportFragmentManager().beginTransaction()
@@ -57,7 +65,5 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         });
-
     }
-
 }

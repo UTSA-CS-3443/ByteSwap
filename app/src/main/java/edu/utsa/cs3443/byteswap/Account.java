@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment;
 
 public class Account extends Fragment {
 
-    private Button backButton;
 
     public Account() {
         // Required empty public constructor
@@ -28,24 +27,8 @@ public class Account extends Fragment {
         View view = inflater.inflate(R.layout.account_page, container, false);
 
         // Initialize and set up the back button
-        setBackButton(view);
-
         return view;
     }
 
-    private void setBackButton(View view) {
-        backButton = view.findViewById(R.id.back_button);
-        if (backButton != null) {
-            backButton.setOnClickListener(v -> {
-                // Use fragment transaction to navigate back
-                if (getActivity() != null) {
-                    getActivity().getSupportFragmentManager().popBackStack();
-                } else {
-                    Toast.makeText(getContext(), "Cannot navigate back", Toast.LENGTH_SHORT).show();
-                }
-            });
-        } else {
-            Toast.makeText(getContext(), "Back button not found", Toast.LENGTH_SHORT).show();
-        }
-    }
+
 }

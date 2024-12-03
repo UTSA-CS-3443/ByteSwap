@@ -33,7 +33,8 @@
             android:exported="false" />
         <activity android:name=".debug_funny" android:exported="false"/>
         <activity android:name=".Account" android:exported="false"/>
-
+        <activity android:name=".LoginActivity" android:exported="true"/>
+        <activity android:name=".RegistrationActivity" android:exported="true"/>
     </application>
 
 </manifest>
