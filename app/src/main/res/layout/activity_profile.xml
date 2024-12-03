@@ -13,7 +13,7 @@
         android:id="@+id/profilePicture"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/profile_placeholder"
+        android:src="@drawable/jibril"
         android:scaleType="centerCrop"
         android:layout_marginBottom="8dp"
         android:background="@drawable/circle_background" />
@@ -23,7 +23,7 @@
         android:id="@+id/profileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="Jibril Ahmed Pascua"
         android:textSize="20sp"
         android:fontFamily="sans-serif-medium"
         android:layout_marginBottom="4dp" />
@@ -33,7 +33,7 @@
         android:id="@+id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USERNAME"
+        android:text="Jibril.p"
         android:textSize="16sp"
         android:textColor="@android:color/darker_gray"
         android:layout_marginBottom="16dp" />

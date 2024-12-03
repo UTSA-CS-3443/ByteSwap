@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
+import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,6 +19,8 @@ public class Settings extends Fragment {
     private Button aboutUsButton;
     private Button funnyDebugButton;
     private Button accountButton;
+    private Button logoutButton;
+
 
     @Nullable
     @Override
@@ -30,7 +33,7 @@ public class Settings extends Fragment {
         setAboutUsButton(view);
         setFunnyButton(view);
         setAccountButton(view);
-
+     setLogoutButton(view);
         return view;
     }
 
@@ -86,6 +89,29 @@ public class Settings extends Fragment {
             });
         } else {
             Toast.makeText(getContext(), "Account button not found", Toast.LENGTH_SHORT).show();
+        }
+    }
+    private void setLogoutButton(View view) {
+        logoutButton = view.findViewById(R.id.logout_button);
+        if (logoutButton != null) {
+            logoutButton.setOnClickListener(v -> {
+                // Clear the login state in SharedPreferences
+                if (getActivity() != null) {
+                    getActivity().getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
+                            .edit()
+                            .putBoolean("isLoggedIn", false)
+                            .apply();
+
+                    // Navigate back to LoginActivity
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+
+                    // Clear the activity stack to prevent going back to MainActivity
+                    getActivity().finishAffinity();
+                }
+            });
+        } else {
+            Toast.makeText(getContext(), "Logout button not found", Toast.LENGTH_SHORT).show();
         }
     }
 }
