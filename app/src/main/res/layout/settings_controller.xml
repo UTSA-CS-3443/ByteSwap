@@ -14,6 +14,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="20dp" />
+    <Button
+        android:id="@+id/account_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Account" />
 
     <Button
         android:id="@+id/about_Us"
