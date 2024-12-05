@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:padding="16dp">
+
+<!-- Settings Title -->
+<TextView
+    android:id="@+id/aboutUsText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="About The Team"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_gravity="center_horizontal"
+    android:paddingBottom="20dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/jibril"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Jibril Pascua - Settings Page"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/reese"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Reese Sylvester - Feed Page"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/brooke"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Brooke Lane - Login Page"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/iqra"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Iqra Abdullah - Profile Page"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/raina"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Raina Rivera - DM Page"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+<Button
+    android:id="@+id/back_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Back to Main Menu" />
+
+</LinearLayout>
+</ScrollView>
