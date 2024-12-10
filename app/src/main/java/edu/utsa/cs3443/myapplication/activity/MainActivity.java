@@ -1,4 +1,4 @@
-package edu.utsa.cs3443.myapplication;
+package edu.utsa.cs3443.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import edu.utsa.cs3443.myapplication.DMActivity;
+import edu.utsa.cs3443.myapplication.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 

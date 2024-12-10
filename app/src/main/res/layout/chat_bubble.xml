@@ -14,28 +14,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/contactImage"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
+        android:textSize="10dp"
         />
 
-        <TextView
+    <TextView
         android:id="@+id/contactSub"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="sub"
         app:layout_constraintTop_toTopOf="@id/contactName"
         app:layout_constraintStart_toEndOf="@id/contactImage"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-            android:textSize="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="9dp"
+        android:textSize="20dp"
         />
 
     <ImageView
         android:id="@+id/contactImage"
-        android:layout_width="42dp"
-        android:layout_height="44dp"
+        android:layout_width="43dp"
+        android:layout_height="47dp"
         android:background="@drawable/profilepic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
