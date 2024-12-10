@@ -31,8 +31,6 @@ public class Profile extends AppCompatActivity {
                     // Show a toast with the status message
                     Toast.makeText(Profile.this, "Posted: " + statusText, Toast.LENGTH_SHORT).show();
 
-                    // Clear the input field after posting
-                    statusInput.setText("");
                 } else {
                     // Inform the user if the status is empty
                     Toast.makeText(Profile.this, "Please enter a status!", Toast.LENGTH_SHORT).show();
