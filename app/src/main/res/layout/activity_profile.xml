@@ -45,11 +45,11 @@
         android:layout_height="wrap_content"
         android:hint="What's on your mind?"
         android:background="@drawable/rounded_edit_text"
-        android:padding="12dp"
-        android:textSize="14sp"
+        android:padding="16dp"
+        android:textSize="16sp"
         android:textColor="@android:color/black"
         android:textColorHint="@android:color/darker_gray"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="20dp" />
 
     <!-- Post Button -->
     <Button
@@ -63,67 +63,72 @@
         android:textColor="@android:color/white" />
 
     <!-- Gallery (Profile Posts) -->
-    <GridLayout
-        android:id="@+id/postsGrid"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:layout_marginTop="16dp">
+        android:layout_height="match_parent">
+        <GridLayout
+            android:id="@+id/postsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
 
-        <ImageView
+            <!-- Static Images for Posts -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="118dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food1" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="118dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food2" />
+
+            <ImageView
             android:layout_width="0dp"
             android:layout_height="118dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/food1" />
+            android:src="@drawable/food3" />
 
-        <ImageView
+        <!-- Additional static images for other posts -->
+            <ImageView
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:src="@drawable/food2"
-            android:scaleType="centerCrop"
-            android:layout_margin="4dp" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:src="@drawable/food3"
-            android:scaleType="centerCrop"
-            android:layout_margin="4dp" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="122dp"
+            android:layout_height="118dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="4dp"
             android:scaleType="centerCrop"
             android:src="@drawable/food4" />
 
-        <ImageView
+            <ImageView
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="118dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:src="@drawable/food5"
+            android:layout_margin="4dp"
             android:scaleType="centerCrop"
-            android:layout_margin="4dp" />
+            android:src="@drawable/food5" />
 
-        <ImageView
+            <ImageView
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="118dp"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:src="@drawable/food6"
+            android:layout_margin="4dp"
             android:scaleType="centerCrop"
-            android:layout_margin="4dp" />
+            android:src="@drawable/food6" />
 
-    </GridLayout>
-
+        </GridLayout>
+    </ScrollView>
 </LinearLayout>
