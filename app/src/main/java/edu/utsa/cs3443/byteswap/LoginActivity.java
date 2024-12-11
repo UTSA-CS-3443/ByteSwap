@@ -10,13 +10,34 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Activity class for user login. Manages user authentication and navigation to other activities.
+ */
 public class LoginActivity extends AppCompatActivity {
 
+    /**
+     * Input field for the username.
+     */
     EditText username;
+    /**
+     * Input field for the password.
+     */
     EditText password;
+    /**
+     * Button to trigger the login process.
+     */
     Button loginButton;
+    /**
+     * Button to navigate to the registration screen.
+     */
     Button signupButton;
 
+    /**
+     * Called when the activity is starting. Sets up the layout and initializes components.
+     *
+     * @param savedInstanceState If the activity is being re-initialized after previously being shut down,
+     *                           this Bundle contains the data it most recently supplied. Otherwise, it is null.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +84,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Navigates to the MainActivity and finishes the current activity.
+     */
     private void navigateToMainActivity() {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
