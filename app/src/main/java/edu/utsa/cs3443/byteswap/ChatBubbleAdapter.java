@@ -1,20 +1,20 @@
 package edu.utsa.cs3443.byteswap;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import java.util.List;
 
-public class ListViewAdapter extends BaseAdapter {
+public class ChatBubbleAdapter extends BaseAdapter {
     private Context context;
     private List<String[]> dataList;
 
-    public ListViewAdapter(Context context, List<String[]> dataList) {
+    public ChatBubbleAdapter(Context context, List<String[]> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
@@ -38,7 +38,7 @@ public class ListViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.list_button, parent, false);
+        View view = inflater.inflate(R.layout.chat_bubble, parent, false);
 
 
 
