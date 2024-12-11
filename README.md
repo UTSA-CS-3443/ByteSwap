@@ -40,5 +40,7 @@ Logging in and out of the app.
 
 # Limitations:
 Editing posts is not yet available.
+Can not make or send posts.
+Can't make your own profile.
 Can't send messages in DM or click on them. ( Raina's branch has a working DM page where you can click through the messages, but there was no time to push onto the main page. The Working DM page can be viewed in Raina's branch)
 Some buttons in settings are causing application to crash.
