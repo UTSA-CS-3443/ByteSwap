@@ -11,11 +11,16 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+
+/**
+     * Constructs a Post with the specified details.
+     *
+     * @param settingsButton creates the button that allows you to move to the settinggg by s page
+     */
+
 public class MainActivity extends AppCompatActivity {
 
     private Button settingsButton;
-    public static String accountName = "ByteSwap";
-    public static String password = "password";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
