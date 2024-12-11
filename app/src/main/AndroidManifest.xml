@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ByteSwap"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MessageChatActivity"
+            android:exported="false" />
         <!-- MainActivity declaration -->
         <activity
             android:name=".MainActivity"
@@ -22,19 +24,25 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Settings activity declaration -->
+        </activity> <!-- Settings activity declaration -->
         <activity
             android:name=".Settings"
             android:exported="false" />
         <activity
             android:name=".AboutUs"
             android:exported="false" />
-        <activity android:name=".debug_funny" android:exported="false"/>
-        <activity android:name=".Account" android:exported="false"/>
-        <activity android:name=".LoginActivity" android:exported="true"/>
-        <activity android:name=".RegistrationActivity" android:exported="true"/>
+        <activity
+            android:name=".debug_funny"
+            android:exported="false" />
+        <activity
+            android:name=".Account"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

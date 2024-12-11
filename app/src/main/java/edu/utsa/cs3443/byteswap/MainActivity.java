@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (item.getItemId() == R.id.nav_account) {
                 selectedFragment = new Account();
             } else if (item.getItemId() == R.id.nav_directmessaging) {
-                selectedFragment = new messaging_page();
+                selectedFragment = new DMActivity();
             }
 
             if (selectedFragment != null) {
