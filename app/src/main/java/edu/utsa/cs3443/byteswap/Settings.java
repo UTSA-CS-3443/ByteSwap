@@ -13,6 +13,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+/**
+     * Constructs a Post with the specified details.
+     *
+     * @param backButton allows you to go back to the main page. but isnt currently implemented in the code
+     * @param aboutUdButton brings you to the about us page which shows yoh the tram
+     * @param funnyDebugButton brungs you the the developer page which is a funny page
+     * @param logoutButton logs you out of your account when pressed
+     */
+
 public class Settings extends Fragment {
 
     private Button backButton;
