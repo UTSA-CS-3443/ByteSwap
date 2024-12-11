@@ -10,10 +10,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * An adapter for displaying a list of posts in a RecyclerView.
+ */
 public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.FeedViewHolder> {
 
     private List<Post> postList;
 
+    /**
+     * Constructs a FeedAdapter with the specified list of posts.
+     *
+     * @param postList the list of posts to display
+     */
     public FeedAdapter(List<Post> postList) {
         this.postList = postList;
     }
@@ -39,12 +47,20 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.FeedViewHolder
         return postList.size();
     }
 
+    /**
+     * ViewHolder for the FeedAdapter.
+     */
     static class FeedViewHolder extends RecyclerView.ViewHolder {
         TextView usernameTextView;
         TextView contentTextView;
         TextView timestampTextView;
         ImageView postImageView;
 
+        /**
+         * Constructs a FeedViewHolder.
+         *
+         * @param itemView the view representing a single post item
+         */
         public FeedViewHolder(@NonNull View itemView) {
             super(itemView);
             usernameTextView = itemView.findViewById(R.id.usernameTextView);
