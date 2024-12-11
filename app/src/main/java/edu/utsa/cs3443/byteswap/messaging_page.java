@@ -13,16 +13,38 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
+/**
+ * Fragment for the messaging page, displaying a list of contacts and their messages.
+ */
 public class messaging_page extends Fragment {
-
+    
+     /**
+     * ListView to display the list of contacts.
+     */
     private ListView list;
+    /**
+     * Custom adapter to populate the ListView.
+     */
     private ListViewAdapter adapter;
+    /**
+     * ArrayList to hold the data for the ListView.
+     */
     private ArrayList<String[]> arrayList;
-
+    /**
+     * Default constructor for the fragment.
+     */
     public messaging_page() {
         // Required empty public constructor
     }
 
+    /**
+     * Called to create and return the view hierarchy associated with the fragment.
+     *
+     * @param inflater The LayoutInflater object that can be used to inflate views in the fragment.
+     * @param container The parent view that the fragment's UI should attach to.
+     * @param savedInstanceState If non-null, this fragment is being re-constructed from a previous saved state.
+     * @return The root View of the fragment's layout.
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,6 +71,12 @@ public class messaging_page extends Fragment {
         return view;
     }
 
+    /**
+     * Sets up a button with an OnClickListener to handle back navigation.
+     *
+     * @param view The root view of the fragment.
+     * @param buttonId The resource ID of the button.
+     */
     private void setupButton(View view, int buttonId) {
         Button button = view.findViewById(buttonId);
         if (button != null) {
